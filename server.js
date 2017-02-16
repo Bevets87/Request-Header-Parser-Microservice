@@ -23,7 +23,7 @@ app.get('/', function(req,res){
 
   json.language = parseAcceptLanguage(req.headers['accept-language']);
   json.software = parseUserAgent(req.headers['user-agent']);
-  json.ipaddress = parseIpaddress(req.connection.remoteAddress);
+  json.ipaddress = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
 
   res.json(json);
 });
