@@ -10,6 +10,7 @@
   "author": "steve barton",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.16.1",
     "express": "^4.14.1"
   },
   "devDependencies": {},
