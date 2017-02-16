@@ -12,7 +12,9 @@ return str.match(/\([^\)]+\)/)[0].slice(1,str.length - 2)
 }
 
 var parseIpaddress = function(str){
-  return str.split(':')[str.length - 1];
+    console.log(str.split(':'))
+  return str.split(':')[str.length - 2];
+
 }
 
 // routes
