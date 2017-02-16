@@ -10,7 +10,15 @@
   "author": "steve barton",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "express": "^4.14.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bevets87/Request-Header-Parser-Microservice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bevets87/Request-Header-Parser-Microservice/issues"
+  },
+  "homepage": "https://github.com/Bevets87/Request-Header-Parser-Microservice#readme"
 }
