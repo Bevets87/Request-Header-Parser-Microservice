@@ -11,13 +11,17 @@ var parseUserAgent = function(str){
 return str.match(/\([^\)]+\)/)[0].slice(1,str.length - 2)
 }
 
+var parseIpaddress = function(str){
+  return str.split(':')[str.length - 1];
+}
+
 // routes
 app.get('/', function(req,res){
   var json = {};
 
   json.language = parseAcceptLanguage(req.headers['accept-language']);
   json.software = parseUserAgent(req.headers['user-agent']);
-  json.ipaddress = req.connection.remoteAddress;
+  json.ipaddress = parseIpaddress(req.connection.remoteAddress);
 
   res.json(json);
 });
