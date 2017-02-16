@@ -8,13 +8,7 @@ return str.split(',')[0];
 }
 
 var parseUserAgent = function(str){
-return str.match(/\([^\)]+\)/)[0].slice(1,str.length - 2)
-}
-
-var parseIpaddress = function(str){
-    console.log(str.split(':'))
-  return str.split(':')[str.length - 2];
-
+return str.match(/\([^\)]+\)/)[0].replace('(','').replace(')', '')
 }
 
 // routes
